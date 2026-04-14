@@ -7,9 +7,10 @@ import { TfiStatsUp } from 'react-icons/tfi';
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
-      <div className='flex justify-between items-center container mx-auto'>
-        <div className="flex-1">
-    <img src={logo} alt="" />
+      <div className='flex flex-col gap-6 md:flex-row justify-between items-center container mx-auto'>
+        <div className="flex-1 mt-6 md:mt-0">
+          <Link to='/'><img src={logo} alt="" /></Link>
+    
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal px-1">

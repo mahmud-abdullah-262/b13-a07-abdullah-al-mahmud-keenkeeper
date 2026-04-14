@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -10,7 +10,10 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <DataProvider>
        <RouterProvider router={Router}>
-      <App />
+        <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
+            <App />
+        </Suspense>
+    
     </RouterProvider>
     </DataProvider>
    
