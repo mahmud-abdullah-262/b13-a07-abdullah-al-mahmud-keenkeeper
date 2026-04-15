@@ -2,9 +2,10 @@
 import { Link } from 'react-router';
 import { useFriends } from '../context/dataContext';
 
+
 const Friends = () => {
   const friendsData = useFriends().friendsData
-  
+
   return (
     <div className='w-11/12 mx-auto'>
       <h1 className='font-bold text-3xl text-gray-800 my-10'>Your Friends</h1>

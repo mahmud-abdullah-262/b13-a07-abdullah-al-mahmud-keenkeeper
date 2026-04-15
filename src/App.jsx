@@ -7,19 +7,21 @@ import Navbar from './component/Navbar'
 import StatsCard from './component/StatsCard'
 import Footer from './component/Footer'
 
+
 function App() {
   
 
   return (
     <>
     <Navbar/>
+    
     <Banner></Banner>
     <StatsCard/>
     <Suspense fallback={<div className='flex justify-center'><span className="loading loading-spinner loading-xl"></span></div>}>
     <Friends/>
     </Suspense>
     <Footer/>
-
+    
   
 
 

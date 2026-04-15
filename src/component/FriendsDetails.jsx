@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {} from 'react';
 import { useFriends } from '../context/dataContext';
 import { useParams } from 'react-router';
 import Navbar from './Navbar';
@@ -7,15 +7,18 @@ import { MdDelete } from 'react-icons/md';
 import { IoCall } from 'react-icons/io5';
 import { IoMdText } from 'react-icons/io';
 import Footer from './Footer';
+import { toast } from 'react-toastify';
 
 const FriendsDetails =  () => {
+    const today = new Date().toLocaleDateString();
     const {id} = useParams();
     
-    const {friendsData, addItem} = useFriends();
+    const {friendsData, addItem, item} = useFriends();
    
     const expectedFriend = friendsData.find(f => f.id == id);
     const {name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date} = expectedFriend;
-  
+    const expectedIntrection = item.filter(i => i.id === expectedFriend.id)
+   
   return (
     <>
     <Navbar></Navbar>
@@ -68,19 +71,34 @@ const FriendsDetails =  () => {
               
             <div className='grid grid-cols-3 gap-4'>
                <div className='flex flex-col items-center gap-2 border border-gray-300 shadow-sm rounded-xl p-6 btn h-full'
-               onClick={() => addItem({...expectedFriend, click: 'call'})}
+               onClick={() => {
+                
+                  addItem({...expectedFriend, click: 'call'});
+                  toast.success(`Called with ${name}`)
+                
+               } }
                >
                   <p className='text-gray-600 text-4xl'><IoCall /></p>
                   <p className='text-gray-600 text-lg font-semibold'>Call</p>
                 </div>
                   <div className='flex flex-col items-center gap-2 border border-gray-300 shadow-sm rounded-xl p-6 btn h-full'
-                  onClick={() => addItem({...expectedFriend, click: 'text'})}
+                   onClick={() => {
+                
+                  addItem({...expectedFriend, click: 'text'});
+                  toast.success(`Text with ${name}`)
+                
+               } }
                   >
                   <p className='text-gray-600 text-4xl'><IoMdText /></p>
                   <p className='text-gray-600'>Text</p>
                 </div>
                   <div className='flex flex-col items-center gap-2 border border-gray-300 shadow-sm rounded-xl p-6 btn h-full'
-                  onClick={() => addItem({...expectedFriend, click: 'video'})}
+                  onClick={() => {
+                
+                  addItem({...expectedFriend, click: 'video'});
+                  toast.success(`Video Call with ${name}`)
+                
+               } }
                   >
                  
                   <p className='text-gray-600 text-4xl'><FaVideo /></p>
@@ -89,24 +107,36 @@ const FriendsDetails =  () => {
             </div>
             
           </div>
-          {/* <div className='flex flex-col gap-2 shadow-sm rounded-xl p-10'>
+          <div className='flex flex-col gap-2 shadow-sm rounded-xl p-10'>
             <div className='flex justify-between'>
           <p className='font-medium text-green-700 '>Recent Interactions</p>
                     <button className='btn'><FaHistory />Full History</button>
             </div>
               
-           <div className='flex justify-between items-center gap-2 border border-gray-300 shadow-sm rounded-xl p-6'>
+           <div className=''>
+            {expectedIntrection.map((i, ind)=> <div key={ind} className='flex justify-between items-center gap-2 border border-gray-300 shadow-sm rounded-xl p-6 mt-2'>
+
             <div className='flex gap-2 items-center '>
-                  <p className='text-gray-600 text-3xl'><IoCall /></p>
+                  <p className='text-gray-600 text-3xl'>
+                    {i.click === 'call' ?  <IoCall /> : 
+                    i.click === 'text' ? <IoMdText /> :
+                    i.click === 'video' ? <FaVideo />: ''
+                    }
+                   </p>
                   <div className='flex flex-col gap-1'>
-                    <p className='text-gray-600 text-lg font-semibold'>Call</p>
+                    <p className='text-gray-600 text-lg font-semibold'>
+                      {i.click === 'call' ?  'Call' : 
+                    i.click === 'text' ? "Text":
+                    i.click === 'video' ? 'Video': ''} with <span>{i.name}</span></p>
                     <p className='text-gray-600 text-sm'>Asked for career advice</p>
                   </div>
             </div>
-                  <p className='text-gray-600 text-sm'>Jan 28, 2026</p>
+                  <p className='text-gray-600 text-sm'>{today}</p>
+            </div>)}
+            
                 </div>
             
-          </div> */}
+          </div>
 
       </div>
     </div>
