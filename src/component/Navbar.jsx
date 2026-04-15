@@ -7,7 +7,7 @@ import { TfiStatsUp } from 'react-icons/tfi';
 const Navbar = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
-      <div className='flex flex-col gap-6 md:flex-row justify-between items-center container mx-auto'>
+      <div className='flex flex-col gap-6 md:flex-row justify-between items-center w-11/12 mx-auto'>
         <div className="flex-1 mt-6 md:mt-0">
           <Link to='/'><img src={logo} alt="" /></Link>
     

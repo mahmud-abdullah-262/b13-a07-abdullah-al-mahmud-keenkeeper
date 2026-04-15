@@ -1,8 +1,12 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import { useFriends } from '../../context/dataContext';
 
 const Timeline = () => {
+   const {friendsData, addItem, item} = useFriends();
+  console.log(item)
+  console.log(friendsData)
   return (
     <div>
       <Navbar></Navbar>
