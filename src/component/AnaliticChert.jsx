@@ -15,7 +15,7 @@ const AnaliticChert = () => {
 
   return (
     <div className='flex flex-col items-center justify-center'>
-      <h1 className='font-bold text-left w-125'>By Interaction Type</h1>
+      <h1 className='font-bold text-center md:text-left w-125'>By Interaction Type</h1>
       <PieChart width={300} height={300}>
         <Pie
           data={data}

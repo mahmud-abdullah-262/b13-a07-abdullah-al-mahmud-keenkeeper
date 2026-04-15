@@ -13,7 +13,7 @@ const Navbar = () => {
     
   </div>
   <div className="flex-none">
-    <ul className="menu menu-horizontal px-1">
+    <ul className="menu menu-horizontal px-1 flex justify-center">
       <NavLink 
       className={({isActive}) => `flex items-center gap-2 font-bold px-4 py-2 rounded-lg 
         ${ isActive ? ' bg-green-800 text-white ' : 'font-bold text-gray-500'} ` } 
