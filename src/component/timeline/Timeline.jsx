@@ -20,7 +20,7 @@ const Timeline = () => {
   }
   return (
     <div>
-      <Navbar></Navbar>
+      {/* <Navbar></Navbar> */}
       <h1 className='font-bold text-3xl text-gray-800 mt-10 w-11/12 mx-auto'>Timeline</h1>
       <div className='w-11/12 mx-auto mb-6'>
         <div className="dropdown dropdown-start ">
@@ -46,28 +46,22 @@ const Timeline = () => {
                           }
                      alt="" />
                    }
-                        {/* <img className='text-gray-600 text-3xl'>
                         
-                          {i.click === 'call' ?   : 
-                          i.click === 'text' ? <IoMdText /> :
-                          i.click === 'video' ? <FaVideo />: ''
-                          }
-                         </img> */}
                         <div className='flex flex-col gap-1'>
                           <p className='text-gray-600 text-lg font-semibold'>
                             {i.click === 'call' ?  'Call' : 
                           i.click === 'text' ? "Text":
                           i.click === 'video' ? 'Video': ''} with <span>{i.name}</span></p>
-                          <p className='text-gray-600 text-sm'>Asked for career advice</p>
+                         <p className='text-gray-600 text-sm'>{today}</p>
                         </div>
                   </div>
-                        <p className='text-gray-600 text-sm'>{today}</p>
+                        
                   </div> )
 
       }
       </div>
      
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 };

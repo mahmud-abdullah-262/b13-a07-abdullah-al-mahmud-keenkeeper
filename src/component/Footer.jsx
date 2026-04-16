@@ -11,7 +11,7 @@ const Footer = () => {
     <p className="">
       Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
     </p>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+    
   </aside>
   <nav>
     <div className="grid grid-flow-col gap-4">
@@ -20,6 +20,15 @@ const Footer = () => {
       <img src={x} alt="twitter" />
     </div>
   </nav>
+
+  <div className='pt-10 border-t border-green-800 flex justify-between w-11/12 mx-auto text-gray-400'>
+    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+    <div className='flex gap-4'>
+      <p >Privacy Policy</p>
+      <p >Terms of Service</p>
+      <p>Cookies</p>
+    </div>
+  </div>
 </footer>
   );
 };

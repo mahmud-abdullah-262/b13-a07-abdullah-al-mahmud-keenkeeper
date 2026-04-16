@@ -6,6 +6,8 @@ const Friends = lazy(() => import('./component/Friends'))
 import Navbar from './component/Navbar'
 import StatsCard from './component/StatsCard'
 import Footer from './component/Footer'
+import { Outlet } from 'react-router'
+import Home from './component/home/Home'
 
 
 function App() {
@@ -14,12 +16,8 @@ function App() {
   return (
     <>
     <Navbar/>
+    <Home></Home>
     
-    <Banner></Banner>
-    <StatsCard/>
-    <Suspense fallback={<div className='flex justify-center'><span className="loading loading-spinner loading-xl"></span></div>}>
-    <Friends/>
-    </Suspense>
     <Footer/>
     
   

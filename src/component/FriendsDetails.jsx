@@ -21,7 +21,7 @@ const FriendsDetails =  () => {
    
   return (
     <>
-    <Navbar></Navbar>
+    {/* <Navbar></Navbar> */}
     <div className='grid grid-cols-1 md:grid-cols-4 w-11/12 mx-auto my-10'>
       <div className='col-span-1 flex flex-col gap-3'>
        <div
@@ -141,7 +141,7 @@ const FriendsDetails =  () => {
       </div>
     </div>
     <div className='mt-120'></div>
-    <Footer/>
+    {/* <Footer/> */}
     </>
   );
 };
