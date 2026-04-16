@@ -1,16 +1,47 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# 📌 Keen Keeper
+## 🧾 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Keen Keeper** is a relationship management web application designed to help users organize, track, and strengthen their connections with friends and acquaintances. It centralizes important information about people in your life and logs every interaction, making relationship management more intentional and structured.
 
-## React Compiler
+## 🧠 Description
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Keen Keeper allows users to maintain a structured record of their social interactions. Each friend has a dedicated profile where details like introduction context, last meeting date, and interaction history are stored.
 
-## Expanding the ESLint configuration
+The platform also provides communication shortcuts (call, message, video call) and visual analytics through a timeline and statistics dashboard. This makes it easier to track engagement patterns and maintain meaningful connections over time.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Technologies Used
+- JavaScript
+- React.js
+- Tailwind CSS
+- DaisyUI
+- React Router
+- Recharts
+- React Icons
+# ✨ Features
+- 👥 Friend Management
+- View all important contacts in one place
+- Store personal details such as:
+  - Last meeting date 
+  - Introduction source
+  -  Relationship context
+- 📄 Individual Friend Page
+- Dedicated profile for each friend
+- Complete interaction history stored per person
+- 📞 Communication Integration
+- Quick actions:
+  - Call
+  - Message
+  - Video Call
+- 🕒 Timeline View
+- Centralized feed of all interactions
+- Easily track when and how you interacted with people
+- 🔄 Sorting System
+- Sort interactions based on different criteria (e.g., date, type)
+- 📊 Statistics Dashboard
+- Visual representation of interactions using pie charts
+- Analyze communication patterns at a glance
+# 📌 Summary
+
+**Keen Keeper** is a practical and user-focused application that transforms casual relationship tracking into a structured system. By combining interaction logs, analytics, and easy communication tools, it helps users stay connected and maintain stronger social bonds efficiently.
